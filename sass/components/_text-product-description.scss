@@ -1,0 +1,21 @@
+.product-description {
+h2{
+  margin-bottom:16px ;
+      font-size: 24px;
+      font-family: "Segoe UI Light";
+      font-weight: 400;
+      color: #000;
+  }
+  p{
+    font-size: 14px;
+    font-family:"Segoe UI";
+    font-weight: 500;
+    color: #000;
+  }
+  p:first-child{
+    margin-bottom: 26px;
+  }
+  p:last-child{
+    margin-bottom: 25px;
+  }
+}

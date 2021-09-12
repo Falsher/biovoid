@@ -1,0 +1,38 @@
+.list-product-description{
+ &>li {
+padding: 1px 1px 1px 0px;
+margin-bottom: 28px;
+div{
+  padding:17px 28px 15px 17px;
+  background-color: #FFF;
+p{
+font-size: 14px;
+font-family: "Segoe UI";
+font-weight: 500;
+color: #000;
+}
+h3{
+  font-size: 24px;
+  font-family: "Segoe UI Light";
+  font-weight: 400;
+  }
+  }
+}
+  &>li:first-child{
+    color: $green-text-color;
+    border-left:19px solid $green-text-color;
+    background-color:  #cccccc;
+  }
+  &>li:nth-child(2){
+    border-left:19px solid  $orange-text-color;
+    color:$orange-text-color;
+    background-color:  #cccccc;
+
+  }
+  &>li:last-child{
+    border-left:19px solid  $blue-text-color;
+    color: $blue-text-color;
+    background-color:  #cccccc;
+
+  }
+}

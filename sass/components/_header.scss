@@ -1,0 +1,86 @@
+// navbar
+.nav-link{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-family: "Segoe UI";
+}
+.header-logo{
+  width: 302px;
+  height: 53px;
+}
+.navbar{
+  align-items: flex-end;
+  .nav-item:not(:first-child){
+    margin-left: 5px;
+  }
+  .navbar-brand{
+    margin: 0px;
+  }
+}
+.navbar .nav-item{
+  text-align: center;
+}
+.navbar-nav {
+  margin-left:159px ;
+}
+// menu nav
+.border-blue{
+  border-bottom: 1px solid $blue-text-color;
+  width: 106px;
+}
+.border-purple{
+  border-bottom: 1px solid $purple-text-color;
+  width: 114px;
+}
+@media screen and (min-width:1200px){
+  .navbar{
+    margin-top: 29px;
+  }
+.border-purple:after {
+  content:'';
+  position: absolute;
+  left: 26%;
+  right: 0;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-top: 5px solid $purple-text-color;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+}
+}
+.border-green{
+  border-bottom: 1px solid $green-text-color;
+  width: 95px;
+}
+.border-carrot{
+  border-bottom: 1px solid $carrot-text-color;
+  width: 92px;
+}
+.border-orange{
+  border-bottom: 1px solid $orange-text-color;
+  width: 112px;
+}
+@media screen and (max-width:1199px) {
+  .navbar-nav {
+    margin-left: 140px;
+}
+}
+@media screen and (max-width:978px) {
+.nav-link{
+  font-size: 18px;
+}
+.border-blue, .border-purple, .border-green, .border-carrot, .border-orange {
+  border: none;
+  margin-left: 0px;
+}
+}
+@media screen and (max-width:576px) {
+  .navbar-nav{
+    margin-left: 0px;
+  }
+  .header-logo{
+    width: 100px;
+  height: auto;
+  }
+}

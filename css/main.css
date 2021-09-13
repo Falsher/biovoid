@@ -58,7 +58,7 @@ button {
   height: 243px;
 }
 
-.nav-link {
+.navbar-nav .nav-item .nav-link {
   font-size: 16px;
   color: black;
   font-family: "Segoe UI";
@@ -158,6 +158,31 @@ button {
     width: 100px;
     height: auto;
   }
+}
+
+.navbar-nav .nav-item:first-child .nav-link:focus,
+.navbar-nav .nav-item:first-child .nav-link:hover {
+  color: #007bff;
+}
+
+.navbar-nav .nav-item:nth-child(2) .nav-link:focus,
+.navbar-nav .nav-item:nth-child(2) .nav-link:hover {
+  color: #603cba;
+}
+
+.navbar-nav .nav-item:nth-child(3) .nav-link:focus,
+.navbar-nav .nav-item:nth-child(3) .nav-link:hover {
+  color: #01a31c;
+}
+
+.navbar-nav .nav-item:nth-child(4) .nav-link:focus,
+.navbar-nav .nav-item:nth-child(4) .nav-link:hover {
+  color: #d44a26;
+}
+
+.navbar-nav .nav-item:nth-child(5) .nav-link:focus,
+.navbar-nav .nav-item:nth-child(5) .nav-link:hover {
+  color: #f0a427;
 }
 
 .link-heading h1 {
@@ -432,12 +457,8 @@ button {
   color: #000;
 }
 
-.product-description p:first-child {
+.product-description p {
   margin-bottom: 26px;
-}
-
-.product-description p:last-child {
-  margin-bottom: 25px;
 }
 
 .list-product-description > li {

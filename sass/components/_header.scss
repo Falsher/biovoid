@@ -1,5 +1,5 @@
 // navbar
-.nav-link{
+.navbar-nav .nav-item .nav-link{
     font-size: 16px;
     color: rgb(0, 0, 0);
     font-family: "Segoe UI";
@@ -83,4 +83,26 @@
     width: 100px;
   height: auto;
   }
+}
+// focus hover nav-menu
+
+.navbar-nav .nav-item:first-child .nav-link:focus,
+.navbar-nav .nav-item:first-child .nav-link:hover{
+  color: $blue-text-color;
+}
+.navbar-nav .nav-item:nth-child(2) .nav-link:focus,
+.navbar-nav .nav-item:nth-child(2) .nav-link:hover{
+  color: $purple-text-color;
+}
+.navbar-nav .nav-item:nth-child(3) .nav-link:focus,
+.navbar-nav .nav-item:nth-child(3) .nav-link:hover{
+  color: $green-text-color;
+}
+.navbar-nav .nav-item:nth-child(4) .nav-link:focus,
+.navbar-nav .nav-item:nth-child(4) .nav-link:hover{
+  color: $carrot-text-color;
+}
+.navbar-nav .nav-item:nth-child(5) .nav-link:focus,
+.navbar-nav .nav-item:nth-child(5) .nav-link:hover{
+  color: $orange-text-color;
 }

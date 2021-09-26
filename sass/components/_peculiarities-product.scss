@@ -1,20 +1,20 @@
 .list-product-description{
  &>li {
 padding: 1px 1px 1px 0px;
-margin-bottom: 28px;
+
 div{
-  padding:17px 28px 15px 17px;
+  padding:16px 28px 15px 14px;
   background-color: #FFF;
 p{
 font-size: 14px;
 font-family: "Segoe UI";
-font-weight: 500;
+font-weight: 400;
 color: #000;
+line-height: 18px;
 }
 h3{
   font-size: 24px;
   font-family: "Segoe UI Light";
-  font-weight: 400;
   }
   }
 }

@@ -1,7 +1,8 @@
 .product-description {
 h2{
-  margin-bottom:16px ;
+
       font-size: 24px;
+      line-height: 18px;
       font-family: "Segoe UI Light";
       font-weight: 400;
       color: #000;
@@ -9,11 +10,8 @@ h2{
   p{
     font-size: 14px;
     font-family:"Segoe UI";
-    font-weight: 500;
+    font-weight: 400;
     color: #000;
+line-height: 18px;
   }
-  p{
-    margin-bottom: 26px;
-  }
-
 }

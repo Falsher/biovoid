@@ -277,11 +277,8 @@ h1 {
   padding-left: 19px;
 }
 
-.btn-video p {
-  margin-left: 12px;
-}
-
 .btn-video span {
+  margin-left: 12px;
   font-size: 12px;
   display: block;
 }

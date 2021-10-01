@@ -1,3 +1,7 @@
+* {
+  padding: 0px;
+}
+
 ul {
   list-style-type: none;
 }
@@ -12,14 +16,29 @@ ul {
   margin-right: auto;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 992px) {
   .container {
     padding-left: 70px;
     padding-right: 70px;
   }
 }
 
-.mt-5 {
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.mt-5,
+.mt-md-5 {
   margin-top: 27.999px !important;
 }
 
@@ -35,6 +54,10 @@ button {
   font-size: 16px;
   color: black;
   font-family: "Segoe UI";
+}
+
+.navbar {
+  margin-top: 29px;
 }
 
 .header-logo {
@@ -54,67 +77,72 @@ button {
 
 .navbar .navbar-brand {
   margin: 0px;
-}
-
-.navbar .nav-item {
-  text-align: center;
-}
-
-@media screen and (min-width: 1200px) {
-  .navbar {
-    margin-top: 29px;
-  }
-  .border-purple:after {
-    content: '';
-    position: absolute;
-    left: 0%;
-    right: 0;
-    margin: 0 auto;
-    width: 0;
-    height: 0;
-    border-top: 5px solid #603cba;
-    border-left: 9px solid transparent;
-    border-right: 9px solid transparent;
-  }
+  padding: 0px;
 }
 
 .border-purple {
   position: relative;
   border-bottom: 1px solid #603cba;
-  width: 114px;
+}
+
+.border-purple:after {
+  content: '';
+  position: absolute;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-top: 5px solid #603cba;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
 }
 
 .border-blue {
   border-bottom: 1px solid #007bff;
-  width: 106px;
 }
 
 .border-green {
   border-bottom: 1px solid #01a31c;
-  width: 95px;
 }
 
 .border-carrot {
   border-bottom: 1px solid #d44a26;
-  width: 92px;
 }
 
 .border-orange {
   border-bottom: 1px solid #f0a427;
-  width: 112px;
 }
 
-@media screen and (max-width: 978px) {
-  .border-blue, .border-purple, .border-green, .border-carrot, .border-orange {
-    border: none;
-    margin-left: 0px;
+@media screen and (min-width: 768px) {
+  .border-purple:after {
+    bottom: -15%;
+    left: 5%;
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 992px) {
+  .border-purple:after {
+    left: 45%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .border-purple:after {
+    bottom: -10%;
+  }
+  .navbar .nav-item .nav-link {
+    text-align: center;
+    padding: 14px 22px 8px 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .header-logo {
-    width: 100px;
+    width: 200px;
     height: auto;
+  }
+  .border-purple:after {
+    bottom: -12%;
+    left: 5%;
   }
 }
 
@@ -152,42 +180,21 @@ h1 {
   line-height: 1.389;
 }
 
-@media screen and (max-width: 978px) {
-  h1 {
-    font-size: 35px;
-  }
-  .link-heading {
-    margin-left: 10px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .link-heading h1 {
-    font-size: 25px;
-  }
-  .link-heading {
-    margin-left: 0px;
-  }
-}
-
 .btn-dovnload-price {
-  width: 229px;
-  height: 38px;
   background-color: #0064cd;
   color: #FFF;
   border: none;
-  margin-bottom: 0px;
-  padding: 10px 0px 8px 14px;
+  padding: 10px 40px 8px 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-size: 12px;
+  font-family: "Arial";
   font-weight: 400;
 }
 
 .btn-dovnload-price span {
   margin-left: 11px;
-  border-bottom: 1px solid #FFF;
 }
 
 .btn-dovnload-price .svg-description-download {
@@ -195,43 +202,66 @@ h1 {
   height: 20px;
 }
 
-.form-control {
-  width: 229px;
-  height: 38px;
-  color: #ccc;
-  border: 1px solid #ccc;
-  border-radius: 0px;
+.btn-dovnload-price:hover, .btn-dovnload-price:focus {
+  color: #fff;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(45, 101, 255, 0.466);
+          box-shadow: 0px 5px 10px 2px rgba(45, 101, 255, 0.466);
 }
 
-.list-search {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 23px;
+.label-form-search {
+  position: relative;
+  width: 100%;
+}
+
+.svg-form-control {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 6px;
+  right: 5%;
+}
+
+.form-control {
+  position: relative;
+  color: #ccc;
+  border: 1px solid #ccc;
+  padding: 18px 75px 18px 5px;
+  border-radius: 0px;
+  font-size: 12px;
+  font-family: "Arial Regular";
+  font-weight: 400;
+}
+
+.form-control:hover, .form-control:focus {
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn-description {
-  background-color: #603cba;
   width: 100%;
-  height: 114px;
+  background-color: #603cba;
   border: none;
   color: #FFF;
   text-align: left;
   padding-top: 15px;
-  padding-left: 16px;
+  padding-left: 17px;
+  padding-bottom: 15px;
 }
 
 .btn-description span {
+  display: inline-block;
+  margin-top: -5px;
+  margin-left: 13px;
   vertical-align: top;
+  font-size: 18px;
+  font-family: 'Segoe UI';
 }
 
 .btn-download {
   background-color: #01a31c;
-  width: 300px;
-  height: 70px;
   border: none;
   color: #FFF;
-  padding: 18px 31px 15px 17px;
+  padding: 10px 31px 15px 17px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,56 +273,75 @@ h1 {
 .btn-download span {
   font-size: 12px;
   display: block;
+  font-size: 18px;
+  font-family: 'Segoe UI';
+}
+
+.btn-download span:first-child {
+  font-size: 12px;
+  font-family: 'Segoe UI';
 }
 
 .btn-example {
   background-color: #2b5797;
-  width: 300px;
-  height: 70px;
   border: none;
   color: #FFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: left;
-  padding: 18px 150px 15px 17px;
+  padding: 10px 150px 15px 17px;
 }
 
 .btn-example span {
+  margin-left: 16px;
   font-size: 12px;
   display: block;
+  font-size: 18px;
+  font-family: 'Segoe UI';
+}
+
+.btn-example span:first-child {
+  margin-left: 0px;
+  font-size: 12px;
+  font-family: 'Segoe UI';
 }
 
 .btn-video {
   background-color: #ffc40d;
-  width: 158px;
-  height: 168px;
+  width: 100%;
   border: none;
   color: #FFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: left;
-  padding-top: 18px;
-  padding-left: 19px;
+  padding: 15px 12px 22px 20px;
 }
 
 .btn-video span {
-  margin-left: 12px;
+  margin-top: -5px;
+  margin-left: 10px;
   font-size: 12px;
   display: block;
+  font-size: 18px;
+  font-family: 'Segoe UI';
+}
+
+.btn-video span:first-child {
+  margin-left: 0px;
+  font-size: 12px;
+  font-family: 'Segoe UI';
 }
 
 .block-img {
-  height: auto;
   border: 3px solid #f1f1f1;
-  padding: 28px 16px 32px 16px;
+  padding: 29px 16px 34px 16px;
 }
 
 .svg-description {
   width: 38px;
   height: 41px;
-  margin-right: 17px;
 }
 
 .svg-video {
@@ -308,9 +357,9 @@ h1 {
 }
 
 .svg-video-arrow {
-  margin-top: 106px;
-  width: 26px;
-  height: 26px;
+  margin-top: 105px;
+  width: 27px;
+  height: 27px;
 }
 
 .svg-example {
@@ -319,67 +368,117 @@ h1 {
   margin-right: 16px;
 }
 
-.interface-btn {
-  margin-left: auto;
-  margin-right: auto;
+@media screen and (max-width: 1200px) {
+  .btn-dovnload-price {
+    padding: 10px 120px 8px 120px;
+  }
+  .label-form-search > .form-control {
+    padding: 18px 120px 18px 120px;
+  }
+  .block-img {
+    margin-top: 28px;
+    padding: 29px 16px 34px 150px;
+  }
 }
 
-@media screen and (max-width: 720px) {
-  .btn-description, .btn-download, .btn-example, .btn-video {
+@media screen and (max-width: 992px) {
+  .btn-dovnload-price {
+    padding: 10px 60px 8px 60px;
+  }
+  .label-form-search > .form-control {
+    padding: 18px 60px 18px 60px;
+  }
+  .block-img {
+    margin-top: 28px;
+    padding: 29px 16px 34px 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btn-download,
+  .btn-example {
     width: 100%;
-    height: 70px;
-    margin-bottom: 10px;
+  }
+  .btn-dovnload-price {
+    padding: 10px 30px 8px 30px;
+  }
+  .label-form-search > .form-control {
+    padding: 18px 70px 18px 30px;
+  }
+  .block-img {
+    margin-top: 28px;
+    padding: 29px 16px 25px 25px;
   }
   .svg-arrow {
-    margin-left: 290px;
-    margin-top: -35px;
-    width: 27px;
-    height: 27px;
+    margin-left: 390px;
   }
   .svg-video-arrow {
-    margin-left: 190px;
-    margin-top: 20px;
-    width: 26px;
-    height: 26px;
+    margin-top: 15px;
+    margin-left: 300px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 30px;
+  }
+  .svg-arrow {
+    margin-left: 20px;
+  }
+  .svg-video-arrow {
+    margin-top: 15px;
+    margin-left: 140px;
+  }
+  .btn-dovnload-price {
+    padding: 10px 5px 8px 5px;
+  }
+  .label-form-search > .form-control {
+    padding: 18px 5px 18px 5px;
+  }
+  .block-img {
+    margin-top: 28px;
+    padding: 29px 16px 25px 25px;
   }
 }
 
 .product-description h2 {
+  margin-top: 20px;
   font-size: 24px;
-  line-height: 18px;
   font-family: "Segoe UI Light";
-  font-weight: 400;
   color: #000;
 }
 
 .product-description p {
   font-size: 14px;
   font-family: "Segoe UI";
-  font-weight: 400;
+  font-style: "Regular";
   color: #000;
   line-height: 18px;
 }
 
-.list-product-description > li {
+.list-product-description {
+  margin-top: 25px;
+}
+
+.list-product-description li {
   padding: 1px 1px 1px 0px;
 }
 
-.list-product-description > li div {
-  padding: 16px 28px 15px 14px;
+.list-product-description li div {
+  padding: 10px 20px 12px 15px;
   background-color: #FFF;
 }
 
-.list-product-description > li div p {
-  font-size: 14px;
-  font-family: "Segoe UI";
-  font-weight: 400;
-  color: #000;
-  line-height: 18px;
-}
-
-.list-product-description > li div h3 {
+.list-product-description li div h3 {
   font-size: 24px;
   font-family: "Segoe UI Light";
+}
+
+.list-product-description li div p {
+  font-size: 14px;
+  font-family: "Segoe UI";
+  color: #000;
+  line-height: 18px;
 }
 
 .list-product-description > li:first-child {
@@ -389,74 +488,26 @@ h1 {
 }
 
 .list-product-description > li:nth-child(2) {
-  border-left: 19px solid #f0a427;
+  border-left: 19px solid #ffc40d;
   color: #f0a427;
   background-color: #cccccc;
 }
 
 .list-product-description > li:last-child {
-  border-left: 19px solid #007bff;
+  border-left: 19px solid #2d89ef;
   color: #007bff;
   background-color: #cccccc;
 }
 
-.right-side-of-the-form {
-  margin-left: 18px;
-}
-
-.right-side-of-the-form .btn-send {
-  width: 114px;
-  height: 31px;
-  background-color: #c3325f;
-  color: #FFF;
-  font-size: 12px;
-  font-weight: 500;
-  font-family: "Segoe UI";
-  border-radius: 0px;
-}
-
-.form-footer {
-  background-color: #f1f1f1;
-  padding: 18px 11px 17px 23px;
-}
-
-.form-control-textarea {
-  border: 2px solid #ccc;
-  width: 638px;
-  height: 129px;
-}
-
-.form-group-input:not(:last-child) {
-  margin-bottom: 18px;
-}
-
-.form-group {
-  margin-bottom: 18px;
-}
-
-.form-group textarea {
-  display: block;
-}
-
-.form-control-input {
-  border: 2px solid #ccc;
-  width: 310px;
-  height: 31px;
-}
-
-footer > div {
-  background-color: #f1f1f1;
-  font-size: 12px;
-  font-weight: 500;
-  font-family: "Segoe UI";
-  padding: 20px 0px 19px 16px;
+@media screen and (max-width: 576px) {
+  .list-product-description li div h3 {
+    font-size: 20px;
+  }
 }
 
 .info-message {
   position: relative;
-  height: 65px;
-  width: 100%;
-  padding: 16px 0px 13px 16px;
+  padding: 16px 0px 12px 16px;
   background-color: #c3325f;
   font-size: 18px;
   font-family: "Segoe UI Light";
@@ -471,24 +522,61 @@ footer > div {
 
 .info-message p {
   margin-left: 7px;
+  margin-bottom: 0px;
 }
 
-@media screen and (min-width: 1200px) {
-  .info-message:before {
-    content: '';
-    position: absolute;
-    left: 32px;
-    bottom: -9px;
-    margin: 0 auto;
-    width: 0;
-    height: 0;
-    border-top: 9px solid #c3325f;
-    border-left: 0px solid transparent;
-    border-right: 9px solid transparent;
-  }
+.info-message:before {
+  content: '';
+  position: absolute;
+  left: 32px;
+  bottom: -9px;
+  margin: 0 auto;
+  border-top: 9px solid #c3325f;
+  border-left: 0px solid transparent;
+  border-right: 9px solid transparent;
 }
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+.block-form {
+  background-color: #f1f1f1;
+  margin: 0px 0px 0px 0px;
+  padding: 18px 0px 17px 0px;
+}
+
+.form-control-textarea {
+  border: 2px solid #ccc;
+  resize: none;
+}
+
+.form-group-input:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.form-group-input > input {
+  outline: 0;
+  outline-offset: 0;
+  border: 2px solid #ccc;
+  padding: 5px 0px 5px 0px;
+}
+
+.form-group-input > select {
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 0px;
+  padding: 2px 0px 3px 10px;
+}
+
+.btn-send {
+  margin-top: 20px;
+  padding: 5px 29px 5px 26px;
+  background-color: #c3325f;
+  color: #FFF;
+  font-size: 12px;
+  font-family: "Segoe UI";
+  border-radius: 0px;
+}
+
+.custom-select {
+  display: block;
   padding-left: 9px;
   font-size: 14px;
   font-family: "Segoe UI";
@@ -496,7 +584,11 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   font-weight: 500;
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+.form-control {
+  border-radius: 0px;
+}
+
+.form-control::-webkit-input-placeholder {
   padding-left: 9px;
   font-size: 14px;
   font-family: "Segoe UI";
@@ -504,7 +596,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-weight: 500;
 }
 
-input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+.form-control:-ms-input-placeholder {
   padding-left: 9px;
   font-size: 14px;
   font-family: "Segoe UI";
@@ -512,7 +604,7 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder {
   font-weight: 500;
 }
 
-input::placeholder, textarea::placeholder {
+.form-control::-ms-input-placeholder {
   padding-left: 9px;
   font-size: 14px;
   font-family: "Segoe UI";
@@ -520,52 +612,35 @@ input::placeholder, textarea::placeholder {
   font-weight: 500;
 }
 
-@media screen and (max-width: 1199px) {
-  .form-control-textarea {
-    width: 500px;
-  }
+.form-control::placeholder {
+  padding-left: 9px;
+  font-size: 14px;
+  font-family: "Segoe UI";
+  color: #000;
+  font-weight: 500;
 }
 
-@media screen and (max-width: 978px) {
-  .form-footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .form-control-textarea {
-    margin-top: 28px;
-    margin-left: 0px;
-    width: 400px;
-  }
-  .right-side-of-the-form {
-    margin-left: 0px;
-  }
+.form-control-textarea {
+  color: #ccc;
+  border: 2px solid #ccc;
+  padding: 5px 75px 15px 0px;
+  border-radius: 0px;
+  font-size: 14px;
+  font-family: "Segoe UI";
+  font-weight: 500;
 }
 
 @media screen and (max-width: 576px) {
-  .form-footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .form-control-textarea {
-    width: 300px;
-  }
-  .right-side-of-the-form {
-    margin-left: 0px;
-    margin-top: 18px;
-  }
   .info-message {
-    font-size: 12px;
-    padding: 5px 0px 5px 16px;
+    font-size: 15px;
   }
+}
+
+footer > div {
+  background-color: #f1f1f1;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Segoe UI";
+  padding: 12px 0px 19px 16px;
 }
 /*# sourceMappingURL=main.css.map */

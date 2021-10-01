@@ -1,38 +1,41 @@
-.list-product-description{
- &>li {
-padding: 1px 1px 1px 0px;
-
-div{
-  padding:16px 28px 15px 14px;
-  background-color: #FFF;
-p{
-font-size: 14px;
-font-family: "Segoe UI";
-font-weight: 400;
-color: #000;
-line-height: 18px;
+.list-product-description {
+    margin-top: 25px;
+    & li {
+        padding: 1px 1px 1px 0px;
+        div {
+            padding: 10px 20px 12px 15px;
+            background-color: #FFF;
+            h3 {
+                font-size: 24px;
+                font-family: "Segoe UI Light";
+            }
+            p {
+                font-size: 14px;
+                font-family: "Segoe UI";
+                color: #000;
+                line-height: 18px;
+            }
+        }
+    }
+    &>li:first-child {
+        color: $green-text-color;
+        border-left: 19px solid $green-text-color;
+        background-color: #cccccc;
+    }
+    &>li:nth-child(2) {
+        border-left: 19px solid #ffc40d;
+        color: $orange-text-color;
+        background-color: #cccccc;
+    }
+    &>li:last-child {
+        border-left: 19px solid #2d89ef;
+        color: $blue-text-color;
+        background-color: #cccccc;
+    }
 }
-h3{
-  font-size: 24px;
-  font-family: "Segoe UI Light";
-  }
-  }
-}
-  &>li:first-child{
-    color: $green-text-color;
-    border-left:19px solid $green-text-color;
-    background-color:  #cccccc;
-  }
-  &>li:nth-child(2){
-    border-left:19px solid  $orange-text-color;
-    color:$orange-text-color;
-    background-color:  #cccccc;
 
-  }
-  &>li:last-child{
-    border-left:19px solid  $blue-text-color;
-    color: $blue-text-color;
-    background-color:  #cccccc;
-
-  }
+@media screen and (max-width:576px) {
+    .list-product-description li div h3 {
+        font-size: 20px;
+    }
 }

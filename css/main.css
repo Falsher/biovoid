@@ -605,7 +605,7 @@ h1 {
      -moz-appearance: none;
           appearance: none;
   text-indent: 1px;
-  background: url("../../image/btnList.png") no-repeat right 4px center;
+  background: url(../../image/btnList.png) no-repeat right 4px center;
   background-color: #ffffff;
 }
 

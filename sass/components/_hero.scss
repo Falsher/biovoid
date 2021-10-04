@@ -46,10 +46,8 @@ h1 {
 
 .form-control {
     position: relative;
-    color: #ccc;
     border: 1px solid #ccc;
     padding: 18px 75px 18px 5px;
-    border-radius: 0px;
     font-size: 12px;
     font-family: "Arial Regular";
     font-weight: 400;
@@ -179,19 +177,39 @@ h1 {
 }
 
 @media screen and (max-width:1200px) {
+    h1 {
+        font-size: 30px;
+    }
     .btn-dovnload-price {
-        padding: 10px 120px 8px 120px;
+        padding: 10px 0px 8px 10px;
     }
     .label-form-search>.form-control {
-        padding: 18px 120px 18px 120px;
+        padding: 18px 0px 18px 10px;
     }
     .block-img {
         margin-top: 28px;
         padding: 29px 16px 34px 150px;
     }
+    .btn-download,
+    .btn-example {
+        width: 100%;
+    }
+    .svg-arrow {
+        margin-left: 520px;
+    }
+    .svg-video-arrow {
+        margin-left: 98px;
+    }
 }
 
 @media screen and (max-width:992px) {
+    .block-button-left-hero {
+        margin-top: 28px;
+    }
+    .btn-download,
+    .btn-example {
+        width: 100%;
+    }
     .btn-dovnload-price {
         padding: 10px 60px 8px 60px;
     }
@@ -202,9 +220,19 @@ h1 {
         margin-top: 28px;
         padding: 29px 16px 34px 60px;
     }
+    .svg-arrow {
+        margin-left: 625px;
+    }
+    .svg-video-arrow {
+        margin-left: 65px;
+    }
 }
 
 @media screen and (max-width:768px) {
+    .block-left-button {
+        padding-right: 0px;
+        margin-bottom: 28px;
+    }
     .btn-download,
     .btn-example {
         width: 100%;
@@ -230,7 +258,7 @@ h1 {
 
 @media screen and (max-width:576px) {
     h1 {
-        font-size: 30px;
+        font-size: 24px;
     }
     .svg-arrow {
         margin-left: 20px;
@@ -239,11 +267,21 @@ h1 {
         margin-top: 15px;
         margin-left: 140px;
     }
+    .block-download-hero {
+        padding-right: 0px;
+    }
+    .block-search-hero {
+        padding-left: 0px;
+    }
     .btn-dovnload-price {
-        padding: 10px 5px 8px 5px;
+        padding: 10px 0px 8px 5px;
+        font-size: 12px;
+        margin-bottom: 28px;
     }
     .label-form-search>.form-control {
-        padding: 18px 5px 18px 5px;
+        padding: 18px 0px 18px 5px;
+        font-size: 12px;
+        margin-bottom: 10px;
     }
     .block-img {
         margin-top: 28px;

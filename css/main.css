@@ -606,8 +606,6 @@ h1 {
           appearance: none;
   text-indent: 1px;
   background: url("../../image/btnList.png") no-repeat right 4px center;
-  text-indent: 0.01px;
-  text-overflow: "";
   background-color: #ffffff;
 }
 

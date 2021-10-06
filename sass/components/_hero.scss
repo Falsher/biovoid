@@ -260,12 +260,9 @@ h1 {
     h1 {
         font-size: 24px;
     }
+    .svg-video-arrow,
     .svg-arrow {
-        margin-left: 20px;
-    }
-    .svg-video-arrow {
-        margin-top: 15px;
-        margin-left: 140px;
+        display: none;
     }
     .block-download-hero {
         padding-right: 0px;

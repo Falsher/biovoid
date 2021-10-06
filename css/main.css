@@ -366,7 +366,7 @@ h1 {
   margin-right: 16px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   h1 {
     font-size: 30px;
   }
@@ -675,7 +675,7 @@ h1 {
   font-weight: 500;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .block-textarea {
     margin-top: 18px;
   }
